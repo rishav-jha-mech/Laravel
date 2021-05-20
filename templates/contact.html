@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %}Contact Us{% endblock title %}
+
+{% block acontact %}active{% endblock acontact %}
+
+{% block style %}
+/*IDHAR JO BHI LIKHENGE O MAIN ME CHALE JAEGA STYLE KE JAGAH PE*/
+#contact{
+    min-height:90vh;
+    background: url('https://image.freepik.com/free-vector/pink-color-abstract-polygon-background_112418-29.jpg');
+    min-height: 100vh;
+    width:100%;
+}
+{% endblock style %}
+i{
+  font-size: 30px;  
+  margin:8px;
+  padding-right:50px;
+}
+
+
+{% block body %}
+
+
+<!--alert-->
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-success d-flex align-items-center my-0" role="alert">
+  <i class="fas fa-check-circle"></i>
+  <div class="{{ message.tags }}">
+    <strong>
+      {{ message }} 
+    </strong>
+  </div>
+</div>
+{% endfor %}
+{% endif %}
+<!--alert-->
+
+<div id="contact" class="container-fluid px-5">
+<h1 style="font-size:50px;" class="py-3" > <strong>Contact Us</strong></h1>
+<h2 class="my-3" >Fill In the Details Below</h2>
+
+<form method="post">
+{% csrf_token %}
+  <div class="form-group">
+    <label for="exampleFormControlInput1"> <h5>Name </h5></label>
+    <input type="text" id="name" name="name" class="form-control mb-3" id="exampleFormControlInput1" placeholder="Enter Your Name" onkeyup="validate();" required/>
+  </div>
+  
+  <div class="form-group">
+    <label for="exampleFormControlInput1"> <h5>Email Address </h5></label>
+    <input type="email" id="email" name="email" class="form-control mb-3" id="exampleFormControlInput1" placeholder="Enter Your Email Address" required/>
+  </div>
+  
+  <div class="form-group">
+    <label for="exampleFormControlInput1"> <h5>Phone Number</h5></label>
+    <input type="number" id="phone" name="phone" class="form-control mb-3" id="exampleFormControlInput1" placeholder="Enter Your Phone Number" required/>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1"> <h5>Enter Your Message</h5></label>
+    <textarea type="text" id="desc" name="desc" id="" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter Your text Here" required/></textarea>
+  </div>
+  <button class="btn btn-primary my-3 mx-2 mb-5" value="verify">Send Message</button>
+</form>
+</div>
+<script>
+function validate() {
+  var element = document.getElementById('name');
+  element.value = element.value.replace(/[^a-zA-Z0-9@]+/, '');
+};
+</script>
+{% endblock body %}

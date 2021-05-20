@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block style %}
+.card1 {
+    height:84vh !important;
+    width:auto !important;
+    background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=753&q=80');
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size:cover;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+.center{
+    background: rgb(255,255,255);
+    margin: 4px;
+    padding: 25px;
+    min-width:auto;
+    box-shadow:0 0 10px 0px rgb(0,0,0,0.05),
+               0 0 10px 5px rgb(0,0,0,0.05),
+               0 0 10px 0px rgb(0,0,0,0.05),
+               0 0 10px 5px rgb(0,0,0,0.05),
+               0 0 10px 0px rgb(0,0,0,0.05);
+    border-radius: 6px;
+    transition:0.3s;
+}
+.center:hover{
+    box-shadow:0 0 10px 0px rgb(0,0,0,0.1),
+               0 0 10px 5px rgb(0,0,0,0.1),
+               0 0 10px 0px rgb(0,0,0,0.1),
+               0 0 10px 5px rgb(0,0,0,0.1),
+               0 0 10px 0px rgb(0,0,0,0.1);
+    transition:0.3s;
+    
+}
+.card-title{
+    font-size: 30px;
+}
+@media (max-width:600px){
+    .center{
+        background-color: rgb(255,255,255,0.1);
+    box-shadow:0 0 10px 0px rgb(0,0,0,0.15),
+               0 0 10px 5px rgb(0,0,0,0.15),
+               0 0 10px 0px rgb(0,0,0,0.15),
+               0 0 10px 5px rgb(0,0,0,0.15),
+               0 0 10px 0px rgb(0,0,0,0.15);
+    }
+    .center:hover{
+    box-shadow:0 0 10px 0px rgb(0,0,0,0.18),
+               0 0 10px 5px rgb(0,0,0,0.18),
+               0 0 10px 0px rgb(0,0,0,0.18),
+               0 0 10px 5px rgb(0,0,0,0.18),
+               0 0 10px 0px rgb(0,0,0,0.18);
+    transition:0.3s;
+    
+}
+}
+p{
+    font-weight: bold;
+}
+ul{
+    list-style:none;
+}
+card-title{
+    font-size:50px;
+}
+{% endblock style %}
+
+
+{% block inbuttkastyle %} color: #fff;background-color: #dc3545;{% endblock inbuttkastyle %} 
+{% block title %} Login{% endblock %}
+
+{% block body %}
+
+<!--cards-->
+
+<div class="card1">
+  <div class="center">
+    <h2 class="card-title my-3">Log In</h2>
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-primary" type="submit">Log In</button>
+      </form>
+    </div>
+</div>
+<!--cards-->
+
+{% endblock body %}

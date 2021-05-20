@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+
+{{post.blogtitle}}
+
+{% endblock title %}
+
+{% block style %}
+.container{
+    min-height:100vh;
+}
+.container img{
+    display:block;
+    max-width:100%;
+    height: 600px !important;
+}
+#author,#date{
+    min-width: 125px;
+}
+#author{
+margin-right:30px;
+}
+h1{
+    font-family: 'Poppins', sans-serif;
+}
+h5{
+    color: #999;
+}
+.info{
+    display:flex;
+}
+@media(max-width:420px){
+.container .info{
+    display:block;
+}
+{% endblock style %}
+
+{% block body %}
+<!--BLOG SECTION-->
+
+<div class="container mx-6">
+      <h1 class="mt-5">{{post.blogtitle}}</h1>
+      <h5 class="mb-3">{{post.blogsubtitle}}</h5>
+        <div class="info"> 
+        <p id="author">
+        <strong style="color: #ff156f;"> Author: </strong> <strong>{{post.name}} </strong>
+        </p> 
+        <p id="date">
+        <strong style="color: #ff156f;">Last-Updated:</strong> <strong> {{post.pub_date}}</strong>
+        </p> 
+        </div>
+      <img id="thumbs" class="mb-3" src="{{post.thumbnail.url}}" >
+      <div class="content mr-5 mb-5">
+         {{post.blogcontent}}
+      </div>
+</div>
+<!--BLOG SECTION-->
+
+
+{% endblock body %}

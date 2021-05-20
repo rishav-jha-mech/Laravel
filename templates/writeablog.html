@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+
+{% block title %}Write A Blog{% endblock title %}
+{% block awriteblog %}active{% endblock awriteblog %}
+
+{% block style %}
+.super{
+  min-height: 100vh;
+  width:auto;
+  background:url('https://i.pinimg.com/736x/ea/f7/0d/eaf70d5b1c32b039551dbfa29072046f.jpg');
+}
+.alert i{
+  font-size: 30px;  
+  margin:5px;
+}
+
+.inputs{
+  background-image: aqua !important;
+}
+{% endblock style %}
+
+<!--HOW TO MAKE THIS HAPPEN
+
+STEP 1. MAKE THE FRONT END
+STEP 2. TAKE INPUT (BLOG CONTENTS) TO THE DATABASE
+STEP 3. BRING IT BACK TO THE HOMEPAGE
+STEP 4. BSDK ITNA DOOR NAHI AA PAOGE TUM :)
+
+HOW TO MAKE THIS HAPPEN-->
+{% block body %}
+
+<!--    alert    -->
+
+
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-success d-flex align-items-center my-0" role="alert">
+  <i class="fas fa-check-circle"></i>
+  <div class="{{ message.tags }}">
+    <strong>
+      {{ message }} 
+    </strong>
+  </div>
+</div>
+{% endfor %}
+{% endif %}
+
+
+<!--    alert    -->
+
+
+<div class="super"> 
+<div class="container">
+<h1 class="py-3" style="font-size:50px ;text-align:center;"> Write Your Blog  </h1>
+<form method="post" enctype="multipart/form-data">
+{% csrf_token %}
+
+<div class="py-2">
+<h3 class="py-2">Author Name</h3>
+<input id="inputs" name="name" class="form-control form-control-lg" type="text" placeholder="Write Your Name" aria-label=".form-control-lg example" required/>
+</div>
+
+<div class="py-2">
+<h3 class="py-2">Blog Title</h3>
+<input id="inputs" name="blogtitle" class="form-control form-control-lg" type="text" placeholder="Write Your Blog Title" aria-label=".form-control-lg example" required/>
+</div>
+
+<div class="py-2">
+<h3 class="py-2">Blog Sub-Title</h3>
+<input  id="inputs" name="blogsubtitle" class="form-control form-control-lg" type="text" placeholder="Write Your Blog Title" aria-label=".form-control-lg example" required/>
+</div>
+
+<div class="mb-3">
+  <h3 class="py-2">Blog Content</h3>
+  <textarea  name="blogcontent"  class="form-control" id="exampleFormControlTextarea1" rows="4" required/>
+  </textarea>
+</div>
+
+<div class="pb-3">
+    <h3 class="py-2"> Attach Image For Your Blog </h3>
+  <input  name="thumbnail" id="thumbnail" class="form-control" type="file" id="thumbnail">
+</div>
+
+<input type="submit" class="btn btn-success mx-4 my-3 ">
+</form>
+</div>
+</div>
+{% endblock body %}

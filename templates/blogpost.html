@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+
+Blogs
+
+{% endblock title %}
+
+{% block style %}
+.container{
+  min-height: 97vh;
+}
+h1{
+  text-align:center;
+  font-weight: 600;
+  font-size:4rem;
+}
+.card img{
+  border-bottom: 2px solid rgba(0,0,0,0.15);
+}
+.info{
+  display:flex;
+  justify-content: space-between;
+}
+
+{% endblock style %}
+
+{% block ablogpost %}
+active
+{% endblock ablogpost %}
+
+{% block body %}
+<div class="container mt-3">
+  <h1>BLOG PAGE</h1>
+    <div class="row my-2">
+        {% for item in myposts %}
+        <div class="col-md-6">
+           
+<div class="card-group mx-auto">
+  <div class="card my-4 mx-1">
+    <img height="300px" src="{{item.thumbnail.url}}" class="card-img-top">
+    <div class="card-body">
+      <h5 class="card-title"> {{item.blogtitle}} </h5>
+      <p class="card-text">{{item.blogsubtitle}}</p>
+      <div class="info">
+      <div class="name my-2"> <strong style="color: #ff156f;">Author Name - </strong>{{item.name}}   </div>
+      <div class="date my-2"> <strong style="color: #ff156f;">Date-Published - </strong>{{item.pub_date}}  </div>
+      </div>
+    <a href="blogpost/blog/{{item.post_id}}"> <button class="btn btn-primary">Read More</button></a>
+    </div>
+  </div>
+</div> 
+        </div>
+        {% if forloop.counter|divisibleby:2%}
+    </div>
+    <div class="row my-2">
+        {%endif%}
+        {%endfor%}</div>
+</div>
+{% endblock body %}

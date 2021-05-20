@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+
+
+{% block title %} Services {% endblock title %}
+
+{% block aservices %}active{% endblock aservices %}
+
+{% block style %}
+/*IDHAR JO BHI LIKHENGE O MAIN ME CHALE JAEGA STYLE KE JAGAH PE*/
+.card{
+  box-shadow:0 0 10px 1px rgba(0,0,0,0.05),
+             0 0 10px 1px rgba(0,0,0,0.05),
+             0 0 10px 1px rgba(0,0,0,0.05),
+             0 0 10px 1px rgba(0,0,0,0.05);
+  transition: 0.4s;
+}
+.card:hover{
+  box-shadow:0 0 10px 1px rgba(0,0,0,0.2),
+             0 0 10px 1px rgba(0,0,0,0.2),
+             0 0 10px 1px rgba(0,0,0,0.2),
+             0 0 10px 1px rgba(0,0,0,0.2);
+  transition: 0.4s;
+}
+@media(max-width:600px){
+  .card{
+  box-shadow:0 0 10px 1px rgba(0,0,0,0.05),
+             0 0 10px 1px rgba(0,0,0,0.05),
+             0 0 10px 1px rgba(0,0,0,0.05),
+             0 0 10px 1px rgba(0,0,0,0.05);
+  }
+}
+{% endblock style %}
+
+
+{% block body %}
+<div class="container">
+<h1 style="font-size: 3rem;" class="my-4 text-center">Media</h1>
+<div class="card-group">
+  <div class="card mx-2  my-3">
+    <img height="300px" src="https://sm.pcmag.com/t/pcmag_in/review/a/adobe-phot/adobe-photoshop-for-ipad_8kqw.1920.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Photo Shop</h5>
+      <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus quo exercitationem in est eius quaerat.</p>
+      <a href="https://pbs.twimg.com/media/Dh5qVmnX4AEmOch.jpg" style="color:azure; text-decoration: none;" target="_blank"><button class="btn btn-primary my-3" type="submit">Book An Appointment</button></a>
+    </div>
+  </div>
+  <div class="card mx-2  my-3">
+    <img height="300px" src="https://mydmi.imgix.net/v3blog/10-Video-Editing-Tools-for-Small-Business.jpg?crop=edges&fit=crop&fm=jpg&h=1260&ixlib=php-3.3.0&q=40&w=2400&s=84fddcc33e9ad9fdc1530c31303ada4b" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Video Editing</h5>
+      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ipsa nobis, excepturi quibusdam eum iusto?</p>
+      <a href="https://pbs.twimg.com/media/Dh5qVmnX4AEmOch.jpg" style="color:azure; text-decoration: none;" target="_blank"><button class="btn btn-primary my-3" type="submit">Book An Appointment</button></a>
+    </div>
+  </div>
+</div>
+
+<h1 style="font-size: 3rem;" class="my-4 text-center"> Website Development </h1>
+
+<div class="card-group my-3">
+  <div class="card mx-2  my-3">
+    <img height="300px" src="https://i0.wp.com/css-tricks.com/wp-content/uploads/2018/06/attachemnt.png?ssl=1" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Front-End Website</h5>
+      <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt tenetur optio sed eum vero unde aliquid voluptatum dolorem?</p>
+      <a href="https://pbs.twimg.com/media/Dh5qVmnX4AEmOch.jpg" style="color:azure; text-decoration: none;" target="_blank"><button class="btn btn-primary my-3" type="submit">Book An Appointment</button></a>
+    </div>
+  </div>
+  <div class="card mx-2  my-3">
+    <img height="300px" src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190626123927/untitlsssssed.png" class="card-img-top" alt="...">
+    <div class="card-body">
+    <h5 class="card-title"> Full Stack Website </h5>
+      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut corrupti tenetur suscipit voluptatem earum recusandae sint?</p>
+      <a href="https://pbs.twimg.com/media/Dh5qVmnX4AEmOch.jpg" style="color:azure; text-decoration: none;" target="_blank"><button class="btn btn-primary my-3" type="submit">Book An Appointment</button></a>
+    </div>
+  </div>
+</div>
+
+<div class="card-group  my-3">
+  <div class="card mx-2  my-3">
+    <img height="300px" src="https://www.oberlo.com/media/1603954182-seo-article-header.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"> Search Engine Optimisation</h5>
+      <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt tenetur optio sed eum vero unde aliquid voluptatum dolorem?</p>
+      <a href="https://pbs.twimg.com/media/Dh5qVmnX4AEmOch.jpg" style="color:azure; text-decoration: none;" target="_blank"><button class="btn btn-primary my-3" type="submit">Book An Appointment</button></a>
+    </div>
+  </div>
+  <div class="card mx-2  my-3">
+    <img height="300px" src="https://me-en.kaspersky.com/content/en-ae/images/repository/isc/2017-images/What-is-Cyber-Security.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+    <h5 class="card-title"> Web Security Management</h5>
+      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut corrupti tenetur suscipit voluptatem earum recusandae sint?</p>
+      <a href="https://pbs.twimg.com/media/Dh5qVmnX4AEmOch.jpg" style="color:azure; text-decoration: none;" target="_blank"><button class="btn btn-primary my-3" type="submit">Book An Appointment</button></a>
+    </div>
+  </div>
+</div>
+
+
+<h1 style="font-size: 3rem;" class="my-4 text-center">Cyber Attacks </h1>
+
+<div class="card-group  my-3">
+  <div class="card mx-2  my-3">
+    <img height="300px" src="https://images.idgesg.net/images/article/2019/09/cso_nw_ddos_attacks_by_stevanovicigor_aka_igor_stevanovic_gettyimages-948533056_2400x1600-100811283-large.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"> DDOS Attack</h5>
+      <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt tenetur optio sed eum vero unde aliquid voluptatum dolorem?</p>
+      <a href="https://pbs.twimg.com/media/Dh5qVmnX4AEmOch.jpg" style="color:azure; text-decoration: none;" target="_blank"><button class="btn btn-primary my-3" type="submit">Book An Appointment</button></a>
+    </div>
+  </div>
+  <div class="card mx-2  my-3">
+    <img height="300px" src="https://tibettruth.files.wordpress.com/2018/10/anon.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+    <h5 class="card-title"> Remote Access To Host's PC</h5>
+      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut corrupti tenetur suscipit voluptatem earum recusandae sint?</p>
+      <a href="https://pbs.twimg.com/media/Dh5qVmnX4AEmOch.jpg" style="color:azure; text-decoration: none;" target="_blank"><button class="btn btn-primary my-3" type="submit">Book An Appointment</button></a>
+    </div>
+  </div>
+</div>
+
+
+<div class="card-group  my-3">
+  <div class="card mx-2  my-3">
+    <img height="300px" src="https://i0.wp.com/kalilinuxtutorials.com/wp-content/uploads/2018/05/air-hammer-1000x500.png?fit=648%2C400" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"> BruteForce </h5>
+      <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt tenetur optio sed eum vero unde aliquid voluptatum dolorem?</p>
+      <a href="https://pbs.twimg.com/media/Dh5qVmnX4AEmOch.jpg" style="color:azure; text-decoration: none;" target="_blank"><button class="btn btn-primary my-3" type="submit">Book An Appointment</button></a>
+    </div>
+  </div>
+  <div class="card mx-2  my-3">
+    <img height="300px" src="https://miro.medium.com/max/1200/0*ErN7MyOU7wjQLSgM.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+    <h5 class="card-title"> SQL Injection</h5>
+      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut corrupti tenetur suscipit voluptatem earum recusandae sint?</p>
+      <a href="https://pbs.twimg.com/media/Dh5qVmnX4AEmOch.jpg" style="color:azure; text-decoration: none;" target="_blank"><button class="btn btn-primary my-3" type="submit">Book An Appointment</button></a>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="card-group  my-5">
+  <div class="card mx-2  my-3">
+    <img height="300px" src="https://thumbs.dreamstime.com/b/photo-frustrated-man-s-yelling-cell-phone-receiving-annoying-news-unpleasant-message-isolated-over-white-background-112501857.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"> Call Flooding </h5>
+      <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt tenetur optio sed eum vero unde aliquid voluptatum dolorem?</p>
+      <a href="https://pbs.twimg.com/media/Dh5qVmnX4AEmOch.jpg" style="color:azure; text-decoration: none;" target="_blank"><button class="btn btn-primary my-3" type="submit">Book An Appointment</button></a>
+    </div>
+  </div>
+  <div class="card mx-2  my-3">
+    <img height="300px" src="https://mk0globallearni4hrf5.kinstacdn.com/wp-content/uploads/2018/12/Phishingscam-1-300x200.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+    <h5 class="card-title"> SQL Injection</h5>
+      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut corrupti tenetur suscipit voluptatem earum recusandae sint?</p>
+      <a href="https://pbs.twimg.com/media/Dh5qVmnX4AEmOch.jpg" style="color:azure; text-decoration: none;" target="_blank"><button class="btn btn-primary my-3" type="submit">Book An Appointment</button></a>
+    </div>
+  </div>
+</div>
+<a href="https://pbs.twimg.com/media/Dh5qVmnX4AEmOch.jpg" style="color:azure; text-decoration: none;" target="_blank">
+</a>
+</div>
+{% endblock body %}
+
+              
